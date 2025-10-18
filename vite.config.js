@@ -1,12 +1,11 @@
- import { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
+  base: '/cyberquest-portfolio/',   // ✅ REQUIRED for GitHub Pages
   plugins: [react()],
   esbuild: {
-    loader: 'jsx',                // 👈 treat .js as JSX
+    loader: 'jsx',
     include: /src\/.*\.js$/,
-    base: '/cyberquest-portfolio/',
   },
-})
 })
